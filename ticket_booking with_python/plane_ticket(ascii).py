@@ -14,7 +14,6 @@ root.title("Plane Ticket Booking System")
 
 # Create a frame for seating arrangement display
 frame = tk.Frame(root)
-frame.pack(padx=10, pady=10)
 
 # Function to update and display seating arrangement in GUI
 def update_display():
@@ -50,7 +49,10 @@ def book_seat_gui():
 
 # Button to book a seat
 book_button = tk.Button(root, text="Book Seat", command=book_seat_gui)
-book_button.pack()
+book_button.pack(pady=10)
+
+# Pack the frame for seating arrangement display
+frame.pack(padx=10, pady=10)
 
 # Initialize and display initial seating arrangement
 update_display()
